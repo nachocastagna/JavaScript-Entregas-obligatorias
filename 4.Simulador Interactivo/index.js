@@ -1,40 +1,111 @@
-alert ('COTIZACION DEL DIA:\n DOL - $29,90 \n REAL - $50,00 \n EUR - $35,00');
+//CALCULADORA
 
-const cotdolar=29;
-const  coteur=35;
-const  cotrea=50;
+/* let pregunta = prompt("¿Quieres realizar alguna operacion?");
+operaciones = ["sumar", "restar", "multiplicar", "dividir"];
+
+while(pregunta.toLowerCase() == "si"){
+
+    respuesta = prompt("¿Que operacion quieres realizar? --> Sumar - Restar - Dividir - Multiplicar");
+    
+    if(respuesta.toLowerCase() === operaciones[0]){
+        
+        alert("Ok, vamos a SUMAR 2 numeros");
+        num1 = parseFloat(prompt("Elige el primer numero"))  ;
+        num2 = parseFloat(prompt("Elige el segundo numero"));
+        resultado = num1 + num2;
+        mensaje = (`${num1} + ${num2} = ${resultado}`);
+        alert(mensaje);
+        break;
+    
+    }
+    else if(respuesta.toLowerCase() == operaciones[1]){
+        alert("Ok, vamos a RESTAR 2 numeros");
+        num1 = parseFloat(prompt("Elige el primer numero"))  ;
+        num2 = parseFloat(prompt("Elige el segundo numero"));
+        resultado = num1 - num2;
+        mensaje = (`${num1} - ${num2} = ${resultado}`);
+        alert(mensaje);
+        break;
+    }
+
+    else if(respuesta.toLowerCase() == operaciones[2]){
+        alert("Ok, vamos a MULTIPLICAR 2 numeros");
+        num1 = parseFloat(prompt("Elige el primer numero"))  ;
+        num2 = parseFloat(prompt("Elige el segundo numero"));
+        resultado = num1 * num2;
+        mensaje = (`${num1} * ${num2} = ${resultado}`);
+        alert(mensaje);
+        break;
+    }
 
 
+    else if(respuesta.toLowerCase() == operaciones[3]){
+        alert("Ok, vamos a DIVIDIR 2 numeros");
+        num1 = parseFloat(prompt("Elige el primer numero"))  ;
+        num2 = parseFloat(prompt("Elige el segundo numero"));
+        resultado = num1 / num2;
+        mensaje = (`${num1} / ${num2} = ${resultado}`);
+        alert(mensaje);
+        break;
+    }
 
-let moneda = prompt("QUE MONEDA DESEA?. INGRESE DOL, REA O EUR");
-let montoa = parseInt(prompt("INGRESE MONTO A CAMBIAR: "));
-//let resultado=0;
-
-function changem(){
-
-       resutado = montoa*const;
-        //return resultado;
-
+    else{
+        break;
+    }
 }
 
-while (moneda != ESC){
-    switch (moneda){
-        case "DOL":
-            changem(montoa,cotdolar);
-            alert("USTED A CAMBIADO DOLARES - $" + resultado);
-            break;
-        case "EUR":
-            resultado=changem(montoa,coteur);
-            alert("USTED A CAMBIADO EUROS - $" + resultado);
-            break;
-        case "REA":
-            resultado=changem(montoa,cotrea);
-            alert("USTED A CAMBIADO REALES - $" + resultado);
-            break;
-        default:
-            alert("MONEDA NO ENCONTRADA");
-            break;
+alert("Gracias por utilizar nuestra aplicacion"); */
+
+
+const ahorro = 10
+const cuotas12 = 1.35
+const cuotas18 = 1.50
+const cuotas24 = 1.65
+
+
+function interes (a,b){
+    precioInteres = a*b;
+    return `$ ${precioInteres}`
+}
+
+function descuento(a,b){
+    precioDescuento = a-(a/b);
+    return `$ ${precioDescuento}`
+}
+
+
+let precioProducto = prompt("Ingrese el precio del producto: ");
+
+while(precioProducto >=1){
+    pregunta = prompt("¿Va a pagar en efectivo o con tarjeta?");
+    if(pregunta.toLowerCase() != "tarjeta"){
+    alert("Tendra un 10% de descuento. Su precio final es:");
+    alert(descuento(precioProducto,ahorro));
+    break;
     }
+
+
+    else if(pregunta.toLowerCase() === "tarjeta"){
+    cuotas = parseInt (prompt(`En cuantas cuotas quiere abonar? \n12 --> 35% \n18 --> 50% \n24 --> 65%`))}
+    switch(cuotas){
+        case 12:
+        let precioFinal = parseInt (alert(interes(precioProducto,cuotas12)));
+        break;
+
+        case 18:
+        precioFinal = parseInt (alert(interes(precioProducto,cuotas18)))
         
+        break;
+
+        case 24:
+        precioFinal = parseInt (alert(interes(precioProducto,cuotas24)));
+        break;
+
+        default:
+        alert("Elija correctamente las opciones"); 
+        
+    }
     
 }
+
+alert("Vuelve a cargar la pagina y coloca un monto");
