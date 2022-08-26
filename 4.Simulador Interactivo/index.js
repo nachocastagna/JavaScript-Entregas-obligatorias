@@ -16,10 +16,11 @@ function descuento(a,b){
     return `${precioDescuento}`
 }
 
-function numcuotas(a,b){
+numcuotas = (a,b) => a/b /*{
     precioCuotas = a/b;
     return `${precioCuotas}`
-}
+} */
+
 //Simulador
 let precioProducto = parseInt (prompt("Ingrese el precio del producto: "));
 
