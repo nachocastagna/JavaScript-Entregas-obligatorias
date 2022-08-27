@@ -1,5 +1,6 @@
-//Todo en porncentaje
+//CALCULAR INTERESES DEL PRECIO DE UN PRODUCTO
 
+//Todo en porncentaje
 const ahorro = 20 
 const cuotas12 = 1.21
 const cuotas18 = 1.32
@@ -55,3 +56,30 @@ let pregunta = prompt("¿Va a pagar en efectivo o con tarjeta?");
 
 
 alert("Vuelve a cargar la pagina con F5 y pon el precio del producto");
+
+
+// CUALES SON LOS MULTIPLOS DE "UN NUMERO"?
+
+/* let numero = parseFloat(prompt("¿Cuales son los multiplos de (INGRESE NUMERO)?"));
+
+let mcm = parseFloat(prompt("Hasta que valor desea saber su multiplo?"));
+
+if(numero < mcm){
+
+for(let i = 1; i <= 50; i++){
+  
+    let resultado = numero * i;
+    let mensaje = `El multiplo de ${numero} * ${i} es ${resultado}`;
+    if(resultado == mcm){
+        
+    }
+    else if(resultado > mcm){
+        alert("Hasta aqui llegamos")
+        break
+    }
+    alert(mensaje);
+    }
+}
+else{
+    alert("El numero del cual esta interesado no puede ser mayor a su multiplo")
+}  */
