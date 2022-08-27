@@ -16,26 +16,23 @@ function descuento(a,b){
     return `${precioDescuento}`
 }
 
-numcuotas = (a,b) => a/b/* {
+numcuotas = (a,b) => a/b /*{
     precioCuotas = a/b;
     return `${precioCuotas}`
 } */
 
 //Simulador
 let precioProducto = parseInt (prompt("Ingrese el precio del producto: "));
+let pregunta = prompt("¿Va a pagar en efectivo o con tarjeta?");
 
-while(precioProducto >0){
-    pregunta = prompt("¿Va a pagar en efectivo o con tarjeta?");
- 
+  
     if(pregunta.toLowerCase() === "efectivo"){
     alert(`Tendra un ${ahorro}% de descuento y su precio final seria: $${descuento(precioProducto,ahorro)} `);
-    break;
     }
 
     else if(pregunta.toLowerCase() === "tarjeta"){
     cuotas = parseInt (prompt(`En cuantas cuotas quiere abonar? \n12 --> ${(cuotas12*100)-100}% \n18 --> ${(cuotas18*100)-100}%  \n24 --> ${(cuotas24*100)-100}%` ));
-
-            switch(cuotas){
+    switch(cuotas){
         case 12:
         precioFinal = parseInt((`${interes(precioProducto,cuotas12)}`));
         mensaje = alert(`${cuotas} cuotas de $${numcuotas(precioFinal,cuotas)} = $${precioFinal}`);
@@ -52,13 +49,9 @@ while(precioProducto >0){
         break;
 
         default:
-        alert("Vuelve a cargar la pagina con F5 y pon el precio del producto");
-        break;
-        }
-    }
-    
-    else /* if(mensaje>0) */{
+        cuotas = parseInt (prompt(`En cuantas cuotas quiere abonar? \n12 --> ${(cuotas12*100)-100}% \n18 --> ${(cuotas18*100)-100}%  \n24 --> ${(cuotas24*100)-100}%` ));
         break;}
-}
+    }
+
 
 alert("Vuelve a cargar la pagina con F5 y pon el precio del producto");
