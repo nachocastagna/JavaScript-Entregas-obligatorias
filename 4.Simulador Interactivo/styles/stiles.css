@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+.formulario__{
+    padding-top: 10%;
+}
+
+.contenedor__formulario{
+    
+    padding: 20px;
+    margin: auto;
+    width: 40%;
+    background-color: rgb(207, 206, 206);
+    border: 1px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
+
+
+.contenedor__titulo{
+    margin: 35px;   
+    padding: 15px;
+    color: #000;;
+    font-size: x-large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left; 
+}
+
+.comentarios__form{
+    display: block;
+    background: #ebd9d9;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: solid 1px black;
+   /*  font-family:; */
+}
+
+.datos__form{
+    background: #ebd9d9;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: solid 1px black;
+   /*  font-family:; */
+    
+}
+
+.boton__enviar{
+    width: 6rem;
+    height: 2rem;
+    background: #ebd9d9;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: solid 1px black;
+}
